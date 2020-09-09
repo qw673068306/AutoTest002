@@ -1,0 +1,23 @@
+server:
+  port: 8888
+
+logging:
+  file:
+    path: logs
+    name: userManager.log
+
+spring:
+  application:
+    name: UserManager
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/course?serverTimezone=UTC&useSSL=false
+    username: root
+    password: wubin2
+
+mybatis:
+  type-aliases-package: com.course.model
+  mapper-locations:
+    - mapper/*
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
